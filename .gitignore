@@ -1,0 +1,9 @@
+# Xcode files
+# This ignores everything inside a *.xcodeproj except the project.pbxproj
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+xcuserdata
+
+# Project files
+[Bb]uild/
+
