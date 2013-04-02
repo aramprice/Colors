@@ -26,11 +26,13 @@
 
 @implementation ColorsView
 
+NSSize displaysize;
+
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
-        [self setAnimationTimeInterval:1/30.0];
+        [self setAnimationTimeInterval:2.0];
     }
     return self;
 }
@@ -52,6 +54,11 @@
 
 - (void)animateOneFrame
 {
+    displaysize = [self bounds].size;
+
+    [self setRandomBackgroundColor];
+    [self createRandomColoredPolygon];
+
     return;
 }
 
@@ -63,6 +70,51 @@
 - (NSWindow*)configureSheet
 {
     return nil;
+}
+
+- (void)setRandomBackgroundColor
+{
+    NSColor *color = [NSColor colorWithCalibratedRed:[self randomFloat]
+                                               green:[self randomFloat]
+                                                blue:[self randomFloat]
+                                               alpha:1.0]; // no transparency
+    [color set];
+
+    NSBezierPath *background = [NSBezierPath bezierPathWithRect:NSMakeRect(0, 0,
+                                                                           displaysize.width,
+                                                                           displaysize.height)];
+
+    [background fill];
+}
+
+- (void)createRandomColoredPolygon
+{
+    NSColor *color = [NSColor colorWithCalibratedRed:[self randomFloat]
+                                               green:[self randomFloat]
+                                                blue:[self randomFloat]
+                                               alpha:[self randomFloat]];
+    [color set];
+
+    NSBezierPath *polygon = [NSBezierPath bezierPath];
+
+    [polygon moveToPoint: [self randomPoint]];
+    for (int i = 1; i < 10; i++) {
+        [polygon lineToPoint: [self randomPoint]];
+    }
+    [polygon closePath];
+
+    [polygon fill];
+}
+
+- (NSPoint)randomPoint
+{
+    return NSPointFromCGPoint(CGPointMake(SSRandomFloatBetween(0.0, displaysize.width),
+                                          SSRandomFloatBetween(0.0, displaysize.height)));
+}
+
+- (float)randomFloat
+{
+    return SSRandomFloatBetween(0.0, 1.0);
 }
 
 @end
