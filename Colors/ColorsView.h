@@ -23,7 +23,15 @@
 //
 
 #import <ScreenSaver/ScreenSaver.h>
+#define kConfigSheetNIB @"ConfigureSheet"
 
-@interface ColorsView : ScreenSaverView
+@interface ColorsView : ScreenSaverView {
+    IBOutlet id configSheet; // turn off "Release When Closed" and "Visible At Launch"
+    IBOutlet id animationIntervalSecondsOption;
+    IBOutlet id polygonSideCountOption;
+}
+
+- (IBAction) cancelClick: (id) sender;
+- (IBAction) okClick: (id) sender;
 
 @end

@@ -26,12 +26,30 @@
 
 @implementation ColorsView
 
+static NSString *const ColorsModuleName = @"com.aramprice.Colors";
+static NSString *const AnimationIntervalSecondsKey = @"AnimationIntervalSeconds";
+static NSString *const PolygonSideCountKey = @"PolygonSideCount";
+
 NSSize displaysize;
+ScreenSaverDefaults *defaults;
 
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
+        defaults = [ScreenSaverDefaults defaultsForModuleWithName:ColorsModuleName];
+        NSLog(@"initWithFrame -> defaults dictionaryRepresentation: %@", [defaults dictionaryRepresentation]);
+        NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    [NSNumber numberWithFloat:2.0], AnimationIntervalSecondsKey,
+                                    [NSNumber numberWithInt:10], PolygonSideCountKey,
+                                    nil];
+        [defaults registerDefaults:dictionary];
+        [animationIntervalSecondsOption setState:2.0];
+        [polygonSideCountOption setState:10];
+
+        NSLog(@"initWithFrame -> dictionary: %@", dictionary);
+        NSLog(@"initWithFrame -> defaults dictionaryRepresentation: %@", [defaults dictionaryRepresentation]);
+        NSLog(@"initWithFrame -> [defaults floatForKey:@AnimationIntervalSecondsKey]: %f", [defaults floatForKey:AnimationIntervalSecondsKey]);
         [self setAnimationTimeInterval:2.0];
     }
     return self;
@@ -64,12 +82,53 @@ NSSize displaysize;
 
 - (BOOL)hasConfigureSheet
 {
-    return NO;
+    return YES;
 }
 
 - (NSWindow*)configureSheet
 {
-    return nil;
+    defaults = [ScreenSaverDefaults defaultsForModuleWithName:ColorsModuleName];
+    NSLog(@"configureSheet -> defaults dictionaryRepresentation: %@", [defaults dictionaryRepresentation]);
+
+    if (!configSheet)
+    {
+        if ([[NSBundle mainBundle] loadNibNamed:@"ConfigureSheet" owner:self topLevelObjects:nil])
+        {
+            [[[NSApp delegate] window] beginSheet:self.configureSheet completionHandler:nil];
+        }
+        else
+        {
+            NSLog( @"Failed to load configure sheet." );
+            NSBeep();
+        }
+    }
+
+    [animationIntervalSecondsOption setState:[defaults floatForKey:AnimationIntervalSecondsKey]];
+    [polygonSideCountOption setState:[defaults integerForKey:PolygonSideCountKey]];
+    NSLog(@"configureSheet -> defaults dictionaryRepresentation: %@", [defaults dictionaryRepresentation]);
+
+    return configSheet;
+}
+
+- (IBAction)cancelClick:(id)sender
+{
+    [[NSApplication sharedApplication] endSheet:configSheet];
+}
+
+- (IBAction)okClick:(id)sender
+{
+    defaults = [ScreenSaverDefaults defaultsForModuleWithName:ColorsModuleName];
+    NSLog(@"okClick -> defaults dictionaryRepresentation: %@", [defaults dictionaryRepresentation]);
+
+    // Update our defaults
+    [defaults setFloat:[animationIntervalSecondsOption state] forKey:AnimationIntervalSecondsKey];
+    [defaults setInteger:[polygonSideCountOption state] forKey:PolygonSideCountKey];
+
+    // Save the settings to disk
+    [defaults synchronize];
+
+    // Close the sheet
+    [[NSApplication sharedApplication] endSheet:configSheet];
 }
 
 - (void)setRandomBackgroundColor
@@ -89,6 +148,8 @@ NSSize displaysize;
 
 - (void)createRandomColoredPolygon
 {
+    defaults = [ScreenSaverDefaults defaultsForModuleWithName:ColorsModuleName];
+    NSLog(@"createRandomColoredPolygon -> defaults dictionaryRepresentation: %@", [defaults dictionaryRepresentation]);
     NSColor *color = [NSColor colorWithCalibratedRed:[self randomFloat]
                                                green:[self randomFloat]
                                                 blue:[self randomFloat]
@@ -98,6 +159,7 @@ NSSize displaysize;
     NSBezierPath *polygon = [NSBezierPath bezierPath];
 
     [polygon moveToPoint: [self randomPoint]];
+    NSLog(@"createRandomColoredPolygon -> [defaults integerForKey:@PolygonSideCountKey]: %ld", (long)[defaults integerForKey:PolygonSideCountKey]);
     for (int i = 1; i < 10; i++) {
         [polygon lineToPoint: [self randomPoint]];
     }

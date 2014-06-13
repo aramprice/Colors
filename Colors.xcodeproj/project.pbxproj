@@ -11,6 +11,7 @@
 		2421B81E1704F312002B3CAB /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2421B81D1704F312002B3CAB /* ScreenSaver.framework */; };
 		2421B8281704F312002B3CAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2421B8261704F312002B3CAB /* InfoPlist.strings */; };
 		2421B82C1704F312002B3CAB /* ColorsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2421B82B1704F312002B3CAB /* ColorsView.m */; };
+		24CFF570170F67330009D21E /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CFF56F170F67330009D21E /* ConfigureSheet.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2421B8291704F312002B3CAB /* Colors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colors-Prefix.pch"; sourceTree = "<group>"; };
 		2421B82A1704F312002B3CAB /* ColorsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorsView.h; sourceTree = "<group>"; };
 		2421B82B1704F312002B3CAB /* ColorsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsView.m; sourceTree = "<group>"; };
+		24CFF56F170F67330009D21E /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ConfigureSheet.xib; path = ../ConfigureSheet.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		2421B8241704F312002B3CAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				24CFF56F170F67330009D21E /* ConfigureSheet.xib */,
 				2421B8251704F312002B3CAB /* Colors-Info.plist */,
 				2421B8261704F312002B3CAB /* InfoPlist.strings */,
 				2421B8291704F312002B3CAB /* Colors-Prefix.pch */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2421B8281704F312002B3CAB /* InfoPlist.strings in Resources */,
+				24CFF570170F67330009D21E /* ConfigureSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +228,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -249,7 +253,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
