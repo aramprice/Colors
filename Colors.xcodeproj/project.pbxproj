@@ -10,6 +10,7 @@
 		2421B81C1704F312002B3CAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2421B81B1704F312002B3CAB /* Cocoa.framework */; };
 		2421B81E1704F312002B3CAB /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2421B81D1704F312002B3CAB /* ScreenSaver.framework */; };
 		2421B8281704F312002B3CAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2421B8261704F312002B3CAB /* InfoPlist.strings */; };
+		248B454D26F17B47001F90DA /* ColorsPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */; };
 		24C1F62926E349DA00409759 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1F62826E349DA00409759 /* ColorsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		2421B8221704F312002B3CAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2421B8251704F312002B3CAB /* Colors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colors-Info.plist"; sourceTree = "<group>"; };
 		2421B8271704F312002B3CAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsPreferencesView.swift; sourceTree = "<group>"; };
 		24C1F62826E349DA00409759 /* ColorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		2421B8231704F312002B3CAB /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */,
 				24C1F62826E349DA00409759 /* ColorsView.swift */,
 				2421B8241704F312002B3CAB /* Supporting Files */,
 			);
@@ -131,7 +134,7 @@
 		2421B80E1704F312002B3CAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "aram price";
 				TargetAttributes = {
 					2421B8171704F312002B3CAB = {
@@ -220,6 +223,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,6 +274,7 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -289,6 +294,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
