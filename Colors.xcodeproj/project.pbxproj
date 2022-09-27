@@ -3,103 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2421B81C1704F312002B3CAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2421B81B1704F312002B3CAB /* Cocoa.framework */; };
-		2421B81E1704F312002B3CAB /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2421B81D1704F312002B3CAB /* ScreenSaver.framework */; };
-		2421B8281704F312002B3CAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2421B8261704F312002B3CAB /* InfoPlist.strings */; };
-		248B454D26F17B47001F90DA /* ColorsPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */; };
-		24C1F62926E349DA00409759 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1F62826E349DA00409759 /* ColorsView.swift */; };
+		24FC159B2C1A90550073B313 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC159A2C1A90550073B313 /* ColorsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2421B8181704F312002B3CAB /* Colors.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Colors.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		2421B81B1704F312002B3CAB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		2421B81D1704F312002B3CAB /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
-		2421B8201704F312002B3CAB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		2421B8211704F312002B3CAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2421B8221704F312002B3CAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2421B8251704F312002B3CAB /* Colors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colors-Info.plist"; sourceTree = "<group>"; };
-		2421B8271704F312002B3CAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsPreferencesView.swift; sourceTree = "<group>"; };
-		24C1F62826E349DA00409759 /* ColorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
+		24FC158E2C1A901A0073B313 /* Colors.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Colors.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		24FC159A2C1A90550073B313 /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2421B8131704F312002B3CAB /* Frameworks */ = {
+		24FC158B2C1A901A0073B313 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2421B81C1704F312002B3CAB /* Cocoa.framework in Frameworks */,
-				2421B81E1704F312002B3CAB /* ScreenSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2421B80D1704F312002B3CAB = {
+		24FC15842C1A901A0073B313 = {
 			isa = PBXGroup;
 			children = (
-				2421B8231704F312002B3CAB /* Colors */,
-				2421B81A1704F312002B3CAB /* Frameworks */,
-				2421B8191704F312002B3CAB /* Products */,
+				24FC15902C1A901A0073B313 /* Colors */,
+				24FC158F2C1A901A0073B313 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2421B8191704F312002B3CAB /* Products */ = {
+		24FC158F2C1A901A0073B313 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2421B8181704F312002B3CAB /* Colors.saver */,
+				24FC158E2C1A901A0073B313 /* Colors.saver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2421B81A1704F312002B3CAB /* Frameworks */ = {
+		24FC15902C1A901A0073B313 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				2421B81B1704F312002B3CAB /* Cocoa.framework */,
-				2421B81D1704F312002B3CAB /* ScreenSaver.framework */,
-				2421B81F1704F312002B3CAB /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2421B81F1704F312002B3CAB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2421B8201704F312002B3CAB /* AppKit.framework */,
-				2421B8211704F312002B3CAB /* CoreData.framework */,
-				2421B8221704F312002B3CAB /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		2421B8231704F312002B3CAB /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */,
-				24C1F62826E349DA00409759 /* ColorsView.swift */,
-				2421B8241704F312002B3CAB /* Supporting Files */,
+				24FC159A2C1A90550073B313 /* ColorsView.swift */,
 			);
 			path = Colors;
-			sourceTree = "<group>";
-		};
-		2421B8241704F312002B3CAB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2421B8251704F312002B3CAB /* Colors-Info.plist */,
-				2421B8261704F312002B3CAB /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2421B8141704F312002B3CAB /* Headers */ = {
+		24FC15892C1A901A0073B313 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,14 +63,14 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2421B8171704F312002B3CAB /* Colors */ = {
+		24FC158D2C1A901A0073B313 /* Colors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2421B82F1704F312002B3CAB /* Build configuration list for PBXNativeTarget "Colors" */;
+			buildConfigurationList = 24FC15972C1A901A0073B313 /* Build configuration list for PBXNativeTarget "Colors" */;
 			buildPhases = (
-				2421B8121704F312002B3CAB /* Sources */,
-				2421B8131704F312002B3CAB /* Frameworks */,
-				2421B8141704F312002B3CAB /* Headers */,
-				2421B8151704F312002B3CAB /* Resources */,
+				24FC15892C1A901A0073B313 /* Headers */,
+				24FC158A2C1A901A0073B313 /* Sources */,
+				24FC158B2C1A901A0073B313 /* Frameworks */,
+				24FC158C2C1A901A0073B313 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -124,89 +78,82 @@
 			);
 			name = Colors;
 			productName = Colors;
-			productReference = 2421B8181704F312002B3CAB /* Colors.saver */;
+			productReference = 24FC158E2C1A901A0073B313 /* Colors.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2421B80E1704F312002B3CAB /* Project object */ = {
+		24FC15852C1A901A0073B313 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1530;
-				ORGANIZATIONNAME = "aram price";
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					2421B8171704F312002B3CAB = {
-						LastSwiftMigration = 1250;
+					24FC158D2C1A901A0073B313 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
-			buildConfigurationList = 2421B8111704F312002B3CAB /* Build configuration list for PBXProject "Colors" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 24FC15882C1A901A0073B313 /* Build configuration list for PBXProject "Colors" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 2421B80D1704F312002B3CAB;
-			productRefGroup = 2421B8191704F312002B3CAB /* Products */;
+			mainGroup = 24FC15842C1A901A0073B313;
+			productRefGroup = 24FC158F2C1A901A0073B313 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2421B8171704F312002B3CAB /* Colors */,
+				24FC158D2C1A901A0073B313 /* Colors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2421B8151704F312002B3CAB /* Resources */ = {
+		24FC158C2C1A901A0073B313 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2421B8281704F312002B3CAB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2421B8121704F312002B3CAB /* Sources */ = {
+		24FC158A2C1A901A0073B313 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C1F62926E349DA00409759 /* ColorsView.swift in Sources */,
+				24FC159B2C1A90550073B313 /* ColorsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		2421B8261704F312002B3CAB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2421B8271704F312002B3CAB /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		2421B82D1704F312002B3CAB /* Debug */ = {
+		24FC15952C1A901A0073B313 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -214,53 +161,60 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		2421B82E1704F312002B3CAB /* Release */ = {
+		24FC15962C1A901A0073B313 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -268,77 +222,71 @@
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEAD_CODE_STRIPPING = YES;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		2421B8301704F312002B3CAB /* Debug */ = {
+		24FC15982C1A901A0073B313 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
-				INFOPLIST_FILE = "Colors/Colors-Info.plist";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = ColorsView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aramprice.${PRODUCT_NAME:rfc1034identifier}";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aramprice.Colors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Colors/Colors-Bridging-Header.h";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
 		};
-		2421B8311704F312002B3CAB /* Release */ = {
+		24FC15992C1A901A0073B313 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Colors/Colors-Prefix.pch";
-				INFOPLIST_FILE = "Colors/Colors-Info.plist";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = ColorsView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aramprice.${PRODUCT_NAME:rfc1034identifier}";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aramprice.Colors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Colors/Colors-Bridging-Header.h";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
@@ -347,25 +295,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2421B8111704F312002B3CAB /* Build configuration list for PBXProject "Colors" */ = {
+		24FC15882C1A901A0073B313 /* Build configuration list for PBXProject "Colors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2421B82D1704F312002B3CAB /* Debug */,
-				2421B82E1704F312002B3CAB /* Release */,
+				24FC15952C1A901A0073B313 /* Debug */,
+				24FC15962C1A901A0073B313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2421B82F1704F312002B3CAB /* Build configuration list for PBXNativeTarget "Colors" */ = {
+		24FC15972C1A901A0073B313 /* Build configuration list for PBXNativeTarget "Colors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2421B8301704F312002B3CAB /* Debug */,
-				2421B8311704F312002B3CAB /* Release */,
+				24FC15982C1A901A0073B313 /* Debug */,
+				24FC15992C1A901A0073B313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2421B80E1704F312002B3CAB /* Project object */;
+	rootObject = 24FC15852C1A901A0073B313 /* Project object */;
 }
