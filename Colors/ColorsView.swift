@@ -23,13 +23,16 @@
 
 import Foundation
 import ScreenSaver
+import SwiftUI
 
 class ColorsView: ScreenSaverView {
     var context: CGContext! = nil
+    var colorsSettings: ColorsSettings! = nil
 
     override init(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)!
-        self.animationTimeInterval = TimeInterval(3)
+        self.colorsSettings = ColorsSettings()
+        self.animationTimeInterval = TimeInterval(colorsSettings.redrawSeconds)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -48,16 +51,24 @@ class ColorsView: ScreenSaverView {
         setNeedsDisplay(bounds)
     }
 
+    override public var hasConfigureSheet: Bool {
+        return true
+    }
+
+    override public var configureSheet: NSWindow? {
+        return NSWindow(contentViewController:         NSHostingController.init(rootView: ColorsPreferencesView()))
+    }
+
     override func draw(_ rect: NSRect) {
         super.draw(rect)
-        drawScreen()
+        drawScreen(verticies:colorsSettings.verticies)
     }
     
-    func drawScreen() {
+    func drawScreen(verticies:Int) {
         context = NSGraphicsContext.current!.cgContext
 
         setRandomBackgroundColor()
-        createRandomColoredPolygon()
+        createRandomColoredPolygon(verticies:verticies)
     }
 
     func setRandomBackgroundColor() {
@@ -67,13 +78,13 @@ class ColorsView: ScreenSaverView {
         context.restoreGState()
     }
 
-    func createRandomColoredPolygon() {
+    func createRandomColoredPolygon(verticies:Int) {
         context.saveGState()
 
         context.beginPath()
         context.setFillColor(randomColor(withTransparency: true))
         context.move(to: randomPoint())
-        for _ in 1...10 {
+        for _ in 1...verticies {
             context.addLine(to: randomPoint())
         }
         context.fillPath(using: CGPathFillRule.evenOdd)
