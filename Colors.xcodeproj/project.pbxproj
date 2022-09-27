@@ -11,6 +11,7 @@
 		2421B81E1704F312002B3CAB /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2421B81D1704F312002B3CAB /* ScreenSaver.framework */; };
 		2421B8281704F312002B3CAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2421B8261704F312002B3CAB /* InfoPlist.strings */; };
 		248B454D26F17B47001F90DA /* ColorsPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */; };
+		24B1ADD9271CAAB8005D88FD /* ColorsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1ADD8271CAAB8005D88FD /* ColorsSettings.swift */; };
 		24C1F62926E349DA00409759 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1F62826E349DA00409759 /* ColorsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		2421B8251704F312002B3CAB /* Colors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colors-Info.plist"; sourceTree = "<group>"; };
 		2421B8271704F312002B3CAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsPreferencesView.swift; sourceTree = "<group>"; };
+		24B1ADD8271CAAB8005D88FD /* ColorsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsSettings.swift; sourceTree = "<group>"; };
 		24C1F62826E349DA00409759 /* ColorsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			children = (
 				248B454B26F17B47001F90DA /* ColorsPreferencesView.swift */,
 				24C1F62826E349DA00409759 /* ColorsView.swift */,
+				24B1ADD8271CAAB8005D88FD /* ColorsSettings.swift */,
 				2421B8241704F312002B3CAB /* Supporting Files */,
 			);
 			path = Colors;
@@ -186,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B1ADD9271CAAB8005D88FD /* ColorsSettings.swift in Sources */,
 				24C1F62926E349DA00409759 /* ColorsView.swift in Sources */,
+				248B454D26F17B47001F90DA /* ColorsPreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
