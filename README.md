@@ -1,4 +1,4 @@
-# Colors - an OSX Screensaver
+# Colors - a macOS Screensaver
 
 Colors was inspired by an [R](http://www.r-project.org) program created to test whether any two colors could actually clash.
 
