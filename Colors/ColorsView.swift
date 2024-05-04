@@ -27,12 +27,12 @@ import SwiftUI
 
 class ColorsView: ScreenSaverView {
     var context: CGContext! = nil
-    var colorsSettings: ColorsSettings! = nil
+    var verticies = 10
+    var redrawSeconds = 3
 
     override init(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)!
-        self.colorsSettings = ColorsSettings()
-        self.animationTimeInterval = TimeInterval(colorsSettings.redrawSeconds)
+        self.animationTimeInterval = TimeInterval(redrawSeconds)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -55,13 +55,9 @@ class ColorsView: ScreenSaverView {
         return true
     }
 
-    override public var configureSheet: NSWindow? {
-        return NSWindow(contentViewController:         NSHostingController.init(rootView: ColorsPreferencesView()))
-    }
-
     override func draw(_ rect: NSRect) {
         super.draw(rect)
-        drawScreen(verticies:colorsSettings.verticies)
+        drawScreen(verticies:verticies)
     }
     
     func drawScreen(verticies:Int) {
@@ -104,11 +100,11 @@ class ColorsView: ScreenSaverView {
     }
 
     func randomPoint() -> CGPoint {
-        return CGPoint.init(x: SSRandomFloatBetween(0.0, CGFloat(bounds.width)),
-                            y: SSRandomFloatBetween(0.0, CGFloat(bounds.height)));
+        return CGPoint.init(x: randomFloat(upperBound: CGFloat(bounds.width)),
+                            y: randomFloat(upperBound: CGFloat(bounds.height)));
     }
 
-    func randomFloat() -> CGFloat {
-        return SSRandomFloatBetween(0.0, 1.0);
+    func randomFloat(upperBound: CGFloat = 1.0) -> CGFloat {
+        return SSRandomFloatBetween(0.0, upperBound);
     }
 }
