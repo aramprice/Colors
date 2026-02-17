@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24E903692F43B2FD00AE70AB /* ColorsPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E903682F43B2FD00AE70AB /* ColorsPreferences.swift */; };
 		24FC159B2C1A90550073B313 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC159A2C1A90550073B313 /* ColorsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24E903682F43B2FD00AE70AB /* ColorsPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPreferences.swift; sourceTree = "<group>"; };
 		24FC158E2C1A901A0073B313 /* Colors.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Colors.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FC159A2C1A90550073B313 /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				24FC159A2C1A90550073B313 /* ColorsView.swift */,
+				24E903682F43B2FD00AE70AB /* ColorsPreferences.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E903692F43B2FD00AE70AB /* ColorsPreferences.swift in Sources */,
 				24FC159B2C1A90550073B313 /* ColorsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +270,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = ColorsView;
+				INFOPLIST_KEY_NSPrincipalClass = Colors.ColorsView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
@@ -289,7 +293,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = ColorsView;
+				INFOPLIST_KEY_NSPrincipalClass = Colors.ColorsView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
