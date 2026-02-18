@@ -27,7 +27,8 @@ import SwiftUI
 
 class ColorsView: ScreenSaverView {
     // MARK: - Preferences
-    private static let defaultsKey = "Vertices"
+    private static let bundleIdentifier = "ColorsSaver"
+    private static let verticiesDefaultsKey = "Vertices"
 
     private var context: CGContext! = nil
     private var redrawSeconds = 3
@@ -36,29 +37,29 @@ class ColorsView: ScreenSaverView {
     var verticies: Int {
         get {
             let defaults = ColorsView.defaults
-            let value = defaults.integer(forKey: ColorsView.defaultsKey)
+            let value = defaults.integer(forKey: ColorsView.verticiesDefaultsKey)
             return value > 0 ? value : 10
         }
         set {
             let clamped = max(3, min(newValue, 200))
             let defaults = ColorsView.defaults
-            defaults.set(clamped, forKey: ColorsView.defaultsKey)
+            defaults.set(clamped, forKey: ColorsView.verticiesDefaultsKey)
             defaults.synchronize()
             setNeedsDisplay(bounds)
         }
     }
 
     private static var defaults: ScreenSaverDefaults = {
-        let bundleID = Bundle(for: ColorsView.self).bundleIdentifier ?? "ColorsSaver"
+        let bundleID = Bundle(for: ColorsView.self).bundleIdentifier ?? bundleIdentifier
         if let d = ScreenSaverDefaults(forModuleWithName: bundleID) {
             // Register defaults if not present
-            let registration: [String: Any] = [defaultsKey: 10]
+            let registration: [String: Any] = [verticiesDefaultsKey: 10]
             d.register(defaults: registration)
             return d
         }
         // Fallback to a new defaults with registration
         let d = ScreenSaverDefaults(forModuleWithName: bundleID)!
-        let registration: [String: Any] = [defaultsKey: 10]
+        let registration: [String: Any] = [verticiesDefaultsKey: 10]
         d.register(defaults: registration)
         return d
     }()
