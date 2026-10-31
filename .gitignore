@@ -1,9 +1,13 @@
-# Xcode files
-# This ignores everything inside a *.xcodeproj except the project.pbxproj
-*.xcodeproj/
-!*.xcodeproj/project.pbxproj
-xcuserdata
+# Xcode user state
+xcuserdata/
+*.xcuserstate
 
-# Project files
-[Bb]uild/
+# Build products
+build/
+DerivedData/
+*.app
+*.xctest
 
+# Swift Package Manager
+.swiftpm/
+.build/
